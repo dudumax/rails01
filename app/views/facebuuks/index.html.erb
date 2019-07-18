@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+  <div class="row">
+      <div class="col-xs-12 col-md-6 blog-panel">
+    <% @facebuuks.each do |facebuuk| %>
+        <h1><%= facebuuk.faceboak %></h1>
+        
+     <p><%= link_to 'Show', facebuuk, class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_facebuuk_path(facebuuk), class: 'btn btn-info' %>
+        <%= link_to 'Destroy', facebuuk, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <%= link_to 'New Feed', new_feed_path %></p>
+
+    <% end %>
+  <hr />
+  </div>
+      </div>
+
+
+<br>
+
+<%= link_to ' Facebuuk Post', new_facebuuk_path,class: 'btn btn-info' %>

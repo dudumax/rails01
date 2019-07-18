@@ -1,0 +1,22 @@
+<%= form_with(model: facebuuk, local: true, url: choose_new_or_edits) do |form| %>
+  <% if facebuuk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(facebuuk.errors.count, "error") %> prohibited this facebuuk from being saved:</h2>
+
+      <ul>
+      <% facebuuk.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :faceboak %>
+    <%= form.text_area :faceboak, id: :facebuuk_faceboak %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
