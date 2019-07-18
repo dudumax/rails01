@@ -30,6 +30,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem 'mini_magick', '~> 4.3'
+gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

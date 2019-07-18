@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  root 'feeds#top_page.html'
   
   get 'sessions/new'
   
@@ -9,18 +10,14 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   resources :users
-  
-  resources :feeds do
-     collection do
-      post  :confirm
-    end
-  end
+  resources :feeds
   
   resources :facebuuks do
+      
     collection do
       post  :confirm
     end
-   
+  
   
   
   #resources :sessions, only: [:new, :create, :destroy]
