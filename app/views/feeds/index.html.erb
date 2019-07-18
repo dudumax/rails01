@@ -1,15 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Feeds</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+    
     <% @feeds.each do |feed| %>
         <p><%= feed.image %>
         <%= link_to 'Show', feed, class: 'btn btn-default' %>

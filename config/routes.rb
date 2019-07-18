@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'feeds#top_page.html'
+  
   
   get 'sessions/new'
   
