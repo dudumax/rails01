@@ -80,6 +80,6 @@ class FacebuuksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def facebuuk_params
-      params.permit(:facebuuk).permit(:faceboak)
+      params.require(:facebuuk).permit(:faceboak)
     end
 end
